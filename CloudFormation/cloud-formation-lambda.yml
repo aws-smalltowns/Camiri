@@ -1,0 +1,67 @@
+#zip s3-list.zip s3-list.mjs
+#aws s3 cp s3-list.zip s3://aws.smalltowns.com/cloud-formation
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create Lambda Function.
+Parameters:
+  name:
+    Type: String
+    Default: camiri-cloud-formation
+    Description: Function Name
+  bucket:
+    Type: String
+    Default: aws.smalltowns.com
+    Description: Bucket
+  key:
+    Type: String
+    Default: cloud-formation/s3-list.zip
+    Description: Key
+  handler:
+    Type: String
+    Default: s3-list.handler
+    Description: Handler
+
+Resources:
+  CamiriLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Ref name
+      Runtime: nodejs18.x
+      Role: !GetAtt CamiriRole.Arn
+      Handler: !Ref handler
+      Code:
+        S3Bucket: !Ref bucket
+        S3Key: !Ref key
+      Description: Cloud Formation
+        
+  CamiriRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CamiriLambdaRole
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - "lambda.amazonaws.com"
+            Action:
+              - "sts:AssumeRole"
+
+  CamiriPolicy: 
+    Type: "AWS::IAM::ManagedPolicy"
+    Properties: 
+      ManagedPolicyName: "CamiriLambdaPolicy"
+      Path: "/"
+      PolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - Effect: "Allow"
+            Action: "s3:ListAllMyBuckets"
+            Resource: "arn:aws:s3:::*"
+      Roles: 
+        - Ref: "CamiriRole"
+
+
+      #ManagedPolicyArns:
+        #- arn:aws:iam::aws:policy/AmazonS3FullAccess
+        

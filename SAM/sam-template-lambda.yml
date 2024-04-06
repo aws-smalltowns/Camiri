@@ -1,0 +1,24 @@
+#sam package --template-file sam-template-lambda.yml --output-template-file package.yml --s3-bucket aws.smalltowns.com --s3-prefix sam
+#sam deploy --template-file package.yml --stack-name Camiri-Sam --capabilities CAPABILITY_IAM
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A sample SAM template for deploying Lambda functions.
+Resources:
+  LambdaSAM:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: s3-list-sam.handler
+      Runtime: nodejs18.x
+      AutoPublishAlias: live
+      FunctionName: camiri-sam
+      Policies:
+      - Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Action:
+          - s3:*
+          Resource: '*'
+      DeploymentPreference:
+        Type: Linear10PercentEvery1Minute
+    Metadata:
+      SamResourceId: LambdaCodeBuildSAM
