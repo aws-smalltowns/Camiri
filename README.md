@@ -18,6 +18,7 @@ Despliegue automatizado de una función Lambda por SDK, CloudFormation, SAM y CD
 [Video 3. Despliegue automatizado de una función Lambda por SAM](https://www.youtube.com/watch?v=sdJmfO6au_U)
 
 [Video 4. Despliegue automatizado usando CDK](https://www.youtube.com/watch?v=HVZjEu3zeGA)
+
 Ejemplo tomado del curso de certificación AWS DevOps Engineer Professional by Stephane Maarek (Udemy Academy)
 
-Diapositivas: doc/AWS Small Towns-Camiri.pdf
+[Diapositivas](doc/AWS Small Towns-Camiri.pdf)
