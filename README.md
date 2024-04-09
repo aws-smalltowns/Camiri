@@ -2,8 +2,9 @@
 AWS Small Towns propone un recorrido por diferentes pueblos y ciudades donde en cada
 uno se aborda un tema en particular dentro del área de DevOps sobre la nube AWS.
 
-Mail: aws.small.towns@gmail.com
-[YouTube Channel](https://www.youtube.com/channel/UC-sGMUTiyF4TBanezrRFqrA)
+>Mail: aws.small.towns@gmail.com
+>
+>[YouTube Channel](https://www.youtube.com/channel/UC-sGMUTiyF4TBanezrRFqrA)
 
 ## Ciudad de Orán (Argentina)
 >[Video. Introducción](https://www.youtube.com/watch?v=pv1BbjcRCQg)
