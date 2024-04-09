@@ -5,15 +5,14 @@ uno se aborda un tema en particular dentro del área de DevOps sobre la nube AWS
 Mail: aws.small.towns@gmail.com
 
 ## Ciudad de Orán (Argentina)
-[Video. Introducción](https://www.youtube.com/watch?v=pv1BbjcRCQg)
+> [Video. Introducción](https://www.youtube.com/watch?v=pv1BbjcRCQg)
 
 
 ## Ciudad de Camiri (Bolivia). 
 Despliegue automatizado de una función Lambda por SDK, CloudFormation, SAM y CDK
 
 > [Video 1. Despliegue automatizado de una función Lambda por SDK](https://www.youtube.com/watch?v=vXDYGPaHJWI)
-
-[Diagrama SDK](images/sdk.jpg)
+> [Diagrama SDK](images/sdk.jpg)
 
 > [Video 2. Despliegue automatizado de una función Lambda por Cloud Formation](https://www.youtube.com/watch?v=5Ze6Y1rCvGc)
 
