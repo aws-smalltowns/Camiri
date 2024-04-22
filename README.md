@@ -2,7 +2,7 @@
 AWS Small Towns propone un recorrido por diferentes pueblos y ciudades donde en cada
 uno se aborda un tema en particular dentro del área de DevOps sobre la nube AWS.
 
->[Mail](aws.small.towns@gmail.com)
+>[Mail](mail:aws.small.towns@gmail.com)
 >
 >[YouTube Channel](https://www.youtube.com/channel/UC-sGMUTiyF4TBanezrRFqrA)
 
